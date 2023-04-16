@@ -245,14 +245,11 @@
 		9805563429E9A850000E711C /* MovieReviews */ = {
 			isa = PBXGroup;
 			children = (
-				9805560029E89492000E711C /* ReviewTableViewCell.swift */,
-				9805560129E89492000E711C /* ReviewTableViewCell.xib */,
-				9805560C29E999DE000E711C /* MovieReviewsTableViewController.swift */,
-				9805560D29E999DE000E711C /* MovieReviewsTableViewController.xib */,
-				98BD7FD729EBA2390082C437 /* MovieReviewsProtocol.swift */,
-				98BD7FDC29EBA4B70082C437 /* MovieReviewsPresenter.swift */,
-				98BD7FDE29EBA4FC0082C437 /* MovieReviewsInteractor.swift */,
-				98BD7FE029EBBF520082C437 /* MovieReviewsRouter.swift */,
+				98AC89D529EC593700D818ED /* Router */,
+				98AC89D429EC592C00D818ED /* Interactor */,
+				98AC89D329EC592400D818ED /* Presenter */,
+				98AC89D229EC591B00D818ED /* Protocol */,
+				98AC89D129EC591000D818ED /* Views */,
 			);
 			path = MovieReviews;
 			sourceTree = "<group>";
@@ -419,6 +416,57 @@
 				9878EAF229EAFE8D007D9441 /* MovieDetailsRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		98AC89D129EC591000D818ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98AC89D629EC5E1000D818ED /* TableViewCell */,
+				9805560C29E999DE000E711C /* MovieReviewsTableViewController.swift */,
+				9805560D29E999DE000E711C /* MovieReviewsTableViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		98AC89D229EC591B00D818ED /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				98BD7FD729EBA2390082C437 /* MovieReviewsProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		98AC89D329EC592400D818ED /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				98BD7FDC29EBA4B70082C437 /* MovieReviewsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		98AC89D429EC592C00D818ED /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				98BD7FDE29EBA4FC0082C437 /* MovieReviewsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		98AC89D529EC593700D818ED /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				98BD7FE029EBBF520082C437 /* MovieReviewsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		98AC89D629EC5E1000D818ED /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9805560029E89492000E711C /* ReviewTableViewCell.swift */,
+				9805560129E89492000E711C /* ReviewTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		CDE4B5DA40CD9D2B34F0F83A /* Pods */ = {

@@ -25,19 +25,23 @@ protocol MovieReviewsPresenterProtocol: AnyObject {
     var interactor: MovieReviewsInputInteractorProtocol? { get set }
     var router: MovieReviewsRouterProtocol? { get set }
     
+    var reviews: [MovieReview] { get set }
+    var page: Int { get set }
+    var movieId: Int? { get set }
+    var alreadyGetAllData: Bool { get set }
+    var totalReviews: Int { get set }
+    
     func getReviews()
 }
 
 protocol MovieReviewsInputInteractorProtocol: AnyObject {
-    var movieId: Int? { get set }
-    var page: Int { get set }
     var presenter: MovieReviewsOutputInteractorProtocol? { get set }
     
-    func fetchReviews()
+    func fetchReviews(_ movieId: Int, _ page: Int)
 }
 
 protocol MovieReviewsOutputInteractorProtocol: AnyObject {
-    func didGetReview(_ reviews: [MovieReview], _ totalReviews: Int, _ indexPathToReload: [IndexPath]?)
+    func didGetReview(_ reviews: [MovieReview], _ totalReviews: Int, _ page: Int)
     func didGetAllData()
     func onError(message: String)
 }

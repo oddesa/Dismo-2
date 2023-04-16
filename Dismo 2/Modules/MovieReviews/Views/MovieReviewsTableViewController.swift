@@ -10,8 +10,6 @@ import UIKit
 class MovieReviewsTableViewController: UITableViewController {
     
     var presenter: MovieReviewsPresenterProtocol?
-    var reviews = [MovieReview]()
-    var totalReviews = 0
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +37,9 @@ class MovieReviewsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let totalReviews = presenter?.totalReviews else {
+            return 0
+        }
         return totalReviews
     }
     
@@ -47,12 +48,17 @@ class MovieReviewsTableViewController: UITableViewController {
         if isLoadingCell(for: indexPath) {
             cell.showLoadingView()
         } else {
-            cell.setupContent(reviews[indexPath.row])
+            if let reviews = presenter?.reviews {
+                cell.setupContent(reviews[indexPath.row])
+            }
         }
         return cell
     }
 
     private func isLoadingCell(for indexPath: IndexPath) -> Bool {
+        guard let reviews = presenter?.reviews else {
+            return false
+        }
         return indexPath.row >= reviews.count
     }
     
@@ -73,13 +79,14 @@ extension MovieReviewsTableViewController: UITableViewDataSourcePrefetching {
 
 extension MovieReviewsTableViewController: MovieReviewsViewProtocol {
     func hideLoadingView() {
-        totalReviews = totalReviews > 0 ? totalReviews - 1 : 0
+        guard let totalReviews = presenter?.totalReviews else {
+            return
+        }
+        presenter?.totalReviews = totalReviews > 0 ? totalReviews - 1 : 0
         tableView.reloadData()
     }
     
     func showReviews(_ reviews: [MovieReview], _ totalReviews: Int, _ indexPathToReload: [IndexPath]?) {
-        self.reviews += reviews
-        self.totalReviews = totalReviews + 1
         if let indexPathToReload = indexPathToReload {
             let newIndexPathToReload = visibleIndexPathsToReload(intersecting: indexPathToReload)
             tableView.reloadRows(at: newIndexPathToReload, with: .automatic)
