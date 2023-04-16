@@ -11,6 +11,8 @@ protocol MovieDiscoverPresenterProtocol: AnyObject {
     var view: MovieDiscoverViewProtocol? { get set }
     var interactor: MovieDiscoverInteractorInputProtocol? { get set }
     var router: MovieDiscoverRouterProtocol? { get set }
+    var genredMovies: [GenredDiscoverMovies] { get set }
+    var genres: [MovieGenre] { get set }
     
     // VIEW -> PRESENTER
     func viewDidLoad()
@@ -23,8 +25,7 @@ protocol MovieDiscoverViewProtocol: AnyObject {
     var presenter: MovieDiscoverPresenterProtocol? { get set }
     
     // PRESENTER -> VIEW
-    func showGenres(_ data: [MovieGenre])
-    func showMovieRecommendations(_ data: [GenredDiscoverMovies])
+    func reloadView()
     func showErrorMessage(_ message: String)
 }
 
@@ -42,7 +43,7 @@ protocol MovieDiscoverInteractorOutputProtocol: AnyObject {
     // INTERACTOR -> PRESENTER
     func didGetGenre(_ genres: [MovieGenre])
     func didGetMovieDetail(_ details: MovieDetails)
-    func didFetchMoviesByGenre(_ movies: [GenredDiscoverMovies])
+    func didFetchMoviesByGenre(_ movies: GenredDiscoverMovies)
     func onError(message: String)
 }
 

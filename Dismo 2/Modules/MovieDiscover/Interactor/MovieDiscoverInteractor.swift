@@ -12,8 +12,6 @@ import Foundation
 class MovieDiscoverInteractor: MovieDiscoverInteractorInputProtocol {
     var presenter: MovieDiscoverInteractorOutputProtocol?
     let provider = Movies.getProvider()
-//    var genres = [MovieGenre]()
-    var genredMovies = [GenredDiscoverMovies]()
     
     func fetchGenre() {
         provider.request(.movieGenreList) { [weak self] result in
@@ -37,7 +35,6 @@ class MovieDiscoverInteractor: MovieDiscoverInteractorInputProtocol {
             switch result {
             case .success(let response):
                 do {
-//                    let mappedResponse = try response.map(MovieDetails.self)
                     self.presenter?.didGetMovieDetail(try response.map(MovieDetails.self))
                 } catch {
                     self.presenter?.onError(message: error.localizedDescription)
@@ -58,7 +55,7 @@ class MovieDiscoverInteractor: MovieDiscoverInteractorInputProtocol {
             case .success(let response):
                 do {
                     let movies = try response.map(MoviePaginatedResponse<DiscoverMovie>.self).results
-                    genredMovies.append(GenredDiscoverMovies(genre: genre, movies: movies ?? []))
+                    let genredMovies = GenredDiscoverMovies(genre: genre, movies: movies ?? [])
                     presenter?.didFetchMoviesByGenre(genredMovies)
                 } catch {
                     presenter?.onError(message: error.localizedDescription)

@@ -11,6 +11,14 @@ class MovieDiscoverPresenter: MovieDiscoverPresenterProtocol {
     var view: MovieDiscoverViewProtocol?
     var interactor: MovieDiscoverInteractorInputProtocol?
     var router: MovieDiscoverRouterProtocol?
+    var genredMovies = [GenredDiscoverMovies]()
+    var genres = [MovieGenre]() {
+        didSet {
+            for genre in genres {
+                getMoviesByGenre(genre: genre)
+            }
+        }
+    }
     
     func viewDidLoad() {
         interactor?.fetchGenre()
@@ -34,7 +42,8 @@ class MovieDiscoverPresenter: MovieDiscoverPresenterProtocol {
 
 extension MovieDiscoverPresenter: MovieDiscoverInteractorOutputProtocol {
     func didGetGenre(_ genres: [MovieGenre]) {
-        view?.showGenres(genres)
+        self.genres = genres
+        view?.reloadView()
     }
     
     func didGetMovieDetail(_ details: MovieDetails) {
@@ -42,8 +51,9 @@ extension MovieDiscoverPresenter: MovieDiscoverInteractorOutputProtocol {
         router?.presentMovieDetailsScreen(from: view, for: details)
     }
     
-    func didFetchMoviesByGenre(_ movies: [GenredDiscoverMovies]) {
-        view?.showMovieRecommendations(movies)
+    func didFetchMoviesByGenre(_ movies: GenredDiscoverMovies) {
+        genredMovies.append(movies)
+        view?.reloadView()
     }
     
     func onError(message: String) {

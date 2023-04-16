@@ -11,23 +11,12 @@ class MovieDiscoverViewController: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
-    
-    var genres = [MovieGenre]() {
-        didSet {
-            for genre in genres {
-                presenter?.getMoviesByGenre(genre: genre)
-            }
-        }
-    }
-    let provider = Movies.getProvider()
-    var movies = [GenredDiscoverMovies]()
     var presenter: MovieDiscoverPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadingView.hidesWhenStopped = true
-        
+        title = "Dismo"
         setupTableView()
         presenter?.viewDidLoad()
     }
@@ -53,18 +42,28 @@ extension MovieDiscoverViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 1 : movies.count
+        if let genredMoviesAmount = presenter?.genredMovies.count {
+            return section == 0 ? 1 : genredMoviesAmount
+        } else {
+            return section == 0 ? 1 : 0
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withClass: GenresCollectionTableViewCell.self)
             cell.onTapGenre = presentMovieCollectionsScreen
-            cell.reloadCollectionView(genres)
+            if let genres = presenter?.genres {
+                cell.reloadCollectionView(genres)
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withClass: MovieColllectionTableViewCell.self)
-            cell.setupContent(movies[indexPath.row])
+            guard let genredMovies = presenter?.genredMovies else {
+                return cell
+            }
+            cell.setupContent(genredMovies[indexPath.row])
             cell.onTapMovie = { [weak self] movie in
                 guard let movieId = movie.id else {
                     return
@@ -88,13 +87,7 @@ extension MovieDiscoverViewController: UITableViewDelegate, UITableViewDataSourc
 }
 
 extension MovieDiscoverViewController: MovieDiscoverViewProtocol {
-    func showGenres(_ data: [MovieGenre]) {
-        self.genres = data
-        mainTableView.reloadData()
-    }
-    
-    func showMovieRecommendations(_ data: [GenredDiscoverMovies]) {
-        self.movies = data
+    func reloadView() {
         mainTableView.reloadData()
     }
     

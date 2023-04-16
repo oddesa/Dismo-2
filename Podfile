@@ -7,5 +7,6 @@ target 'Dismo 2' do
 
     pod 'Moya'
     pod 'Kingfisher'
+    pod 'netfox'
 
 end
