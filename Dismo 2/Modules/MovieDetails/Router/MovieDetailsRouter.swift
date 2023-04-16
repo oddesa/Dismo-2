@@ -41,8 +41,8 @@ class MovieDetailsRouter: MovieDetailsRouterProtocol {
         presenter.view = viewController
         presenter.interactor = interactor
         presenter.router = router
+        presenter.movieDetails = details
         interactor.presenter = presenter
-        interactor.movieDetails = details
         
         return viewController
     }

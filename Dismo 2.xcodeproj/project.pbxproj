@@ -260,11 +260,11 @@
 		9805563529E9A896000E711C /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
+				98AC89CB29EC55A900D818ED /* Router */,
+				98AC89CA29EC55A000D818ED /* Protocol */,
+				98AC89C929EC558500D818ED /* Presenter */,
+				98AC89C829EC557900D818ED /* Interactor */,
 				9878EAF629EB03F2007D9441 /* Views */,
-				9878EAF229EAFE8D007D9441 /* MovieDetailsRouter.swift */,
-				9878EAF929EB07B7007D9441 /* MovieDetailsPresenter.swift */,
-				9878EAF429EAFF77007D9441 /* MovieDetailsProtocol.swift */,
-				9878EAF729EB040E007D9441 /* MovieDetailsInteractor.swift */,
 			);
 			path = MovieDetails;
 			sourceTree = "<group>";
@@ -387,6 +387,38 @@
 				980555FD29E88862000E711C /* MovieDetailsViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		98AC89C829EC557900D818ED /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9878EAF729EB040E007D9441 /* MovieDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		98AC89C929EC558500D818ED /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9878EAF929EB07B7007D9441 /* MovieDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		98AC89CA29EC55A000D818ED /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9878EAF429EAFF77007D9441 /* MovieDetailsProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		98AC89CB29EC55A900D818ED /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9878EAF229EAFE8D007D9441 /* MovieDetailsRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		CDE4B5DA40CD9D2B34F0F83A /* Pods */ = {

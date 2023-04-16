@@ -12,23 +12,27 @@ class MovieDetailsPresenter: MovieDetailsPresenterProtocol {
     var interactor: MovieDetailsInputInteractorProtocol?
     var router: MovieDetailsRouterProtocol?
     
+    var trailerResponse: MovieTrailerResponse?
+    var movieDetails: MovieDetails?
+    
     func getTrailer() {
-        interactor?.fetchTrailer()
+        guard let movieId = movieDetails?.id else {
+            onError(message: "Please try again later")
+            return
+        }
+        interactor?.fetchTrailer(movieId: movieId)
     }
     
     func showMovieReviews() {
-        interactor?.getMovieId()
+        guard let view = view,
+              let movieId = movieDetails?.id else {
+            return
+        }
+        router?.navigateToReviewsScreen(from: view, for: movieId)
     }
 }
 
 extension MovieDetailsPresenter: MovieDetailsOutputInteractorProtocol {
-    func didGetMovieId(_ id: Int) {
-        guard let view = view else {
-            return
-        }
-        router?.navigateToReviewsScreen(from: view, for: id)
-    }
-    
     func didGetTrailer(_ key: String) {
         guard let view = view else {
             return

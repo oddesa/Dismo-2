@@ -25,21 +25,20 @@ protocol MovieDetailsPresenterProtocol: AnyObject {
     var interactor: MovieDetailsInputInteractorProtocol? { get set }
     var router: MovieDetailsRouterProtocol? { get set }
     
+    var trailerResponse: MovieTrailerResponse? { get set }
+    var movieDetails: MovieDetails? { get set }
+    
     func getTrailer()
     func showMovieReviews()
 }
 
 protocol MovieDetailsInputInteractorProtocol: AnyObject {
-    var movieDetails: MovieDetails? { get set }
     var presenter: MovieDetailsOutputInteractorProtocol? { get set }
-    
-    func fetchTrailer()
-    func getMovieId()
+    func fetchTrailer(movieId: Int)
 }
 
 protocol MovieDetailsOutputInteractorProtocol: AnyObject {
     func didGetTrailer(_ key: String)
-    func didGetMovieId(_ id: Int)
     func onError(message: String)
 }
 
