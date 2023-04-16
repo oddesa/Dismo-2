@@ -16,7 +16,7 @@ class MovieCollectionsViewController: UIViewController {
     
     init(genre: MovieGenre) {
         super.init(nibName: "MovieCollectionsViewController", bundle: nil)
-        self.navigationController?.title = genre.name
+        title = genre.name
     }
     
     required init?(coder: NSCoder) {
