@@ -12,9 +12,7 @@ class MovieCollectionsViewController: UIViewController {
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
-    var movies = [DiscoverMovie]()
     var presenter: MovieCollectionsPresenterProtocol?
-    var totalMovies = 0
     
     init(genre: MovieGenre) {
         super.init(nibName: "MovieCollectionsViewController", bundle: nil)
@@ -52,19 +50,22 @@ class MovieCollectionsViewController: UIViewController {
 
 extension MovieCollectionsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let totalMovies = presenter?.totalMovies else {
+            return 0
+        }
         return totalMovies
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withClass: MovieCollectionViewCell.self, for: indexPath)
         if !isLoadingCell(for: indexPath) {
-            cell.setupContent(movies[indexPath.row].posterURL)
+            cell.setupContent(presenter?.movies[indexPath.row].posterURL)
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let movieId = movies[indexPath.row].id else {
+        guard let movieId = presenter?.movies[indexPath.row].id else {
             popupAlert(title: "Error", message: "Something wrong, please try again later")
             return
         }
@@ -86,33 +87,24 @@ extension MovieCollectionsViewController: UICollectionViewDataSourcePrefetching 
     }
     
     private func isLoadingCell(for indexPath: IndexPath) -> Bool {
-        return indexPath.row >= movies.count - 1
+        guard let moviesAmount = presenter?.movies.count else {
+            return false
+        }
+        return indexPath.row >= moviesAmount - 1
     }
 }
 
 extension MovieCollectionsViewController: MovieCollectionsViewProtocol {
     func showMovies(_ movies: [DiscoverMovie], _ totalMovies: Int, _ indexPathToReload: [IndexPath]?) {
-        self.movies += movies
-        
         if let indexPathToReload = indexPathToReload {
             let newIndexPathToReload = visibleIndexPathsToReload(intersecting: indexPathToReload)
             collectionView.reloadItems(at: newIndexPathToReload)
         } else {
-
-            // There is inconsistency data in endpoint, do this so we can update the total movies data just in the first time we hit the endpoint
-            self.totalMovies = totalMovies
             collectionView.reloadData()
         }
-        collectionView.reloadData()
     }
 
     func showErrorMessage(_ message: String) {
         popupAlert(title: "Error", message: message)
     }
-    
-    func hideLoadingView() {
-        //
-    }
-    
-    
 }

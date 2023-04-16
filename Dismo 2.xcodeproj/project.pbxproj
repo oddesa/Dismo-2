@@ -335,12 +335,11 @@
 		9878EAE129EA9BCA007D9441 /* MovieCollections */ = {
 			isa = PBXGroup;
 			children = (
-				9878EAE229EA9BE5007D9441 /* MovieCollectionsViewController.swift */,
-				9878EAE329EA9BE5007D9441 /* MovieCollectionsViewController.xib */,
-				98BD7FE429EBF2AA0082C437 /* MovieCollectionsProtocol.swift */,
-				98BD7FE629EBF8FA0082C437 /* MovieCollectionsPresenter.swift */,
-				98BD7FE829EBF9100082C437 /* MovieCollectionsInteractor.swift */,
-				98BD7FEA29EBF9200082C437 /* MovieCollectionsRouter.swift */,
+				98AC89DB29EC64B100D818ED /* Router */,
+				98AC89DA29EC64A700D818ED /* Interactor */,
+				98AC89D929EC649E00D818ED /* Presenter */,
+				98AC89D829EC649400D818ED /* Protocol */,
+				98AC89D729EC648B00D818ED /* Views */,
 			);
 			path = MovieCollections;
 			sourceTree = "<group>";
@@ -467,6 +466,47 @@
 				9805560129E89492000E711C /* ReviewTableViewCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		98AC89D729EC648B00D818ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9878EAE229EA9BE5007D9441 /* MovieCollectionsViewController.swift */,
+				9878EAE329EA9BE5007D9441 /* MovieCollectionsViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		98AC89D829EC649400D818ED /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				98BD7FE429EBF2AA0082C437 /* MovieCollectionsProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		98AC89D929EC649E00D818ED /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				98BD7FE629EBF8FA0082C437 /* MovieCollectionsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		98AC89DA29EC64A700D818ED /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				98BD7FE829EBF9100082C437 /* MovieCollectionsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		98AC89DB29EC64B100D818ED /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				98BD7FEA29EBF9200082C437 /* MovieCollectionsRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		CDE4B5DA40CD9D2B34F0F83A /* Pods */ = {

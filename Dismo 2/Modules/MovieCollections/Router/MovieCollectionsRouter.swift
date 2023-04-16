@@ -18,8 +18,8 @@ class MovieCollectionsRouter: MovieCollectionsRouterProtocol {
         presenter.view = viewController
         presenter.interactor = interactor
         presenter.router = router
+        presenter.genre = genre
         interactor.presenter = presenter
-        interactor.genre = genre
         
         return viewController
     }
