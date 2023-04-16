@@ -1,0 +1,34 @@
+//
+//  MovieCollectionsRouter.swift
+//  Dismo 2
+//
+//  Created by Jehnsen Hirena Kane on 16/04/23.
+//
+
+import UIKit
+
+class MovieCollectionsRouter: MovieCollectionsRouterProtocol {
+    static func createMovieCollectionsModule(with genre: MovieGenre) -> UIViewController {
+        let viewController: MovieCollectionsViewProtocol & UIViewController = MovieCollectionsViewController(genre: genre)
+        let presenter: MovieCollectionsPresenterProtocol & MovieCollectionsInteractorOutputProtocol = MovieCollectionsPresenter()
+        let interactor: MovieCollectionsInteractorInputProtocol = MovieCollectionInteractor()
+        let router: MovieCollectionsRouterProtocol = MovieCollectionsRouter()
+        
+        viewController.presenter = presenter
+        presenter.view = viewController
+        presenter.interactor = interactor
+        presenter.router = router
+        interactor.presenter = presenter
+        interactor.genre = genre
+        
+        return viewController
+    }
+    
+    func presentMovieDetailsScreen(from view: MovieCollectionsViewProtocol, for details: MovieDetails) {
+        let movieDetails = MovieDetailsRouter.createMovieDetailsModule(with: details)
+        guard let viewVC = view as? UIViewController else {
+            fatalError("Invalid View Protocol type")
+        }
+        viewVC.navigationController?.pushViewController(movieDetails, animated: true)
+    }
+}

@@ -1,0 +1,6 @@
+framework module Pods_Dismo_2 {
+  umbrella header "Pods-Dismo 2-umbrella.h"
+
+  export *
+  module * { export * }
+}

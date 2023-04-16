@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="215" id="KGk-i7-Jjw" customClass="ReviewTableViewCell" customModule="Dismo_2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="481" height="215"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="481" height="215"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aAL-sy-gQr">
+                        <rect key="frame" x="16" y="8" width="449" height="199"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFl-b6-mf6">
+                                <rect key="frame" x="0.0" y="0.0" width="449" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWD-Gt-lyl">
+                                        <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SP-ZX-C4B">
+                                        <rect key="frame" x="347.66666666666669" y="0.0" width="43.333333333333314" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nyX-sC-2gL">
+                                        <rect key="frame" x="399" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="gj3-6S-X0P"/>
+                                            <constraint firstAttribute="height" constant="50" id="lkY-a4-NGf"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nyX-sC-2gL" firstAttribute="leading" secondItem="6SP-ZX-C4B" secondAttribute="trailing" constant="8" id="84o-gD-Ggn"/>
+                                    <constraint firstItem="jWD-Gt-lyl" firstAttribute="top" secondItem="WFl-b6-mf6" secondAttribute="top" id="XQV-d1-rsg"/>
+                                    <constraint firstAttribute="trailing" secondItem="nyX-sC-2gL" secondAttribute="trailing" id="ftr-Ui-k3d"/>
+                                    <constraint firstItem="jWD-Gt-lyl" firstAttribute="leading" secondItem="WFl-b6-mf6" secondAttribute="leading" id="hue-QN-kdo"/>
+                                    <constraint firstItem="nyX-sC-2gL" firstAttribute="top" secondItem="WFl-b6-mf6" secondAttribute="top" id="jzK-gv-Zt6"/>
+                                    <constraint firstAttribute="bottom" secondItem="nyX-sC-2gL" secondAttribute="bottom" id="oq9-2E-0T9"/>
+                                    <constraint firstItem="6SP-ZX-C4B" firstAttribute="centerY" secondItem="WFl-b6-mf6" secondAttribute="centerY" id="ta7-u7-158"/>
+                                    <constraint firstItem="6SP-ZX-C4B" firstAttribute="top" secondItem="WFl-b6-mf6" secondAttribute="top" id="vME-Un-50Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="6SP-ZX-C4B" secondAttribute="bottom" id="wBD-h1-CyM"/>
+                                    <constraint firstAttribute="bottom" secondItem="jWD-Gt-lyl" secondAttribute="bottom" id="xhM-lF-srR"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ7-gb-S0E">
+                                <rect key="frame" x="0.0" y="58" width="449" height="141"/>
+                                <string key="text">There\'s nothing spectacularly brilliant about the film, except that the mystery is a pure pleasure to watch. The cast and technical aspects are great. And while the film is dedicated, for one, to Angela Lansbury (author of long-running Murder She Wrote) the detective here is clearly Dame Agatha Christie\'s. The closing credits also say that it\'s dedicated to Stephen Sondheim whose connection escapes me, other than he died just before the film was made, and perhaps too, that his music is typically complicated layers - like onions.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="83O-hh-qgG">
+                        <rect key="frame" x="0.0" y="0.0" width="481" height="215"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </activityIndicatorView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aAL-sy-gQr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="31q-Lh-6Xy"/>
+                    <constraint firstItem="83O-hh-qgG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9ok-mE-XIj"/>
+                    <constraint firstAttribute="bottom" secondItem="83O-hh-qgG" secondAttribute="bottom" id="A5C-UK-LFq"/>
+                    <constraint firstItem="aAL-sy-gQr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="GuQ-FI-s6B"/>
+                    <constraint firstAttribute="bottom" secondItem="aAL-sy-gQr" secondAttribute="bottom" constant="8" id="P69-D5-cLj"/>
+                    <constraint firstItem="83O-hh-qgG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Swl-Zn-73T"/>
+                    <constraint firstAttribute="trailing" secondItem="aAL-sy-gQr" secondAttribute="trailing" constant="16" id="byh-TW-XiY"/>
+                    <constraint firstAttribute="trailing" secondItem="83O-hh-qgG" secondAttribute="trailing" id="gUI-TA-VNI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImageView" destination="nyX-sC-2gL" id="VPC-sn-DTF"/>
+                <outlet property="loadingView" destination="83O-hh-qgG" id="d2i-NW-cUW"/>
+                <outlet property="nameLabel" destination="6SP-ZX-C4B" id="Ogh-my-hpV"/>
+                <outlet property="ratingLabel" destination="jWD-Gt-lyl" id="keA-Mu-tmv"/>
+                <outlet property="reviewLabel" destination="cJ7-gb-S0E" id="BVI-e5-Gmb"/>
+            </connections>
+            <point key="canvasLocation" x="78.625954198473281" y="48.943661971830991"/>
+        </tableViewCell>
+    </objects>
+</document>
