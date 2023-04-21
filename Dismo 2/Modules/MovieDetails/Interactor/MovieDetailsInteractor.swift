@@ -18,12 +18,12 @@ class MovieDetailsInteractor: MovieDetailsInputInteractorProtocol {
             case .success(let response):
                 do {
                     let youtubeKey = try response.map(MovieTrailerResponse.self).officialTrailerKey
-                    presenter?.didGetTrailer(youtubeKey ?? "")
+                    self.presenter?.didGetTrailer(youtubeKey ?? "")
                 } catch {
-                    presenter?.onError(message: error.localizedDescription)
+                    self.presenter?.onError(message: error.localizedDescription)
                 }
             case .failure(let error):
-                presenter?.onError(message: error.localizedDescription)
+                self.presenter?.onError(message: error.localizedDescription)
             }
         }
     }

@@ -22,7 +22,7 @@ class MovieCollectionInteractor: MovieCollectionsInteractorInputProtocol {
                     self.presenter?.onError(message: error.localizedDescription)
                 }
             case .failure(let error):
-                presenter?.onError(message: error.localizedDescription)
+                self.presenter?.onError(message: error.localizedDescription)
             }
         }
     }
@@ -43,10 +43,10 @@ class MovieCollectionInteractor: MovieCollectionsInteractorInputProtocol {
                                                  mappedResponse.totalResults ?? 0,
                                                  newPage)
                 } catch {
-                    presenter?.onError(message: error.localizedDescription)
+                    self.presenter?.onError(message: error.localizedDescription)
                 }
             case .failure(let error):
-                presenter?.onError(message: error.localizedDescription)
+                self.presenter?.onError(message: error.localizedDescription)
             }
         }
     }

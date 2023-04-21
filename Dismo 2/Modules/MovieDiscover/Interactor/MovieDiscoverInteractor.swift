@@ -19,12 +19,12 @@ class MovieDiscoverInteractor: MovieDiscoverInteractorInputProtocol {
             switch result {
             case .success(let response):
                 do {
-                    presenter?.didGetGenre(try response.map(MovieGenreResponse.self).genres)
+                    self.presenter?.didGetGenre(try response.map(MovieGenreResponse.self).genres)
                 } catch {
-                    presenter?.onError(message: error.localizedDescription)
+                    self.presenter?.onError(message: error.localizedDescription)
                 }
             case .failure(let error):
-                presenter?.onError(message: error.localizedDescription)
+                self.presenter?.onError(message: error.localizedDescription)
             }
         }
     }
@@ -40,7 +40,7 @@ class MovieDiscoverInteractor: MovieDiscoverInteractorInputProtocol {
                     self.presenter?.onError(message: error.localizedDescription)
                 }
             case .failure(let error):
-                presenter?.onError(message: error.localizedDescription)
+                self.presenter?.onError(message: error.localizedDescription)
             }
         }
     }
@@ -56,12 +56,12 @@ class MovieDiscoverInteractor: MovieDiscoverInteractorInputProtocol {
                 do {
                     let movies = try response.map(MoviePaginatedResponse<DiscoverMovie>.self).results
                     let genredMovies = GenredDiscoverMovies(genre: genre, movies: movies ?? [])
-                    presenter?.didFetchMoviesByGenre(genredMovies)
+                    self.presenter?.didFetchMoviesByGenre(genredMovies)
                 } catch {
-                    presenter?.onError(message: error.localizedDescription)
+                    self.presenter?.onError(message: error.localizedDescription)
                 }
             case .failure(let error):
-                presenter?.onError(message: error.localizedDescription)
+                self.presenter?.onError(message: error.localizedDescription)
             }
         }
     }
