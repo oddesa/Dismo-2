@@ -18,11 +18,12 @@ class MovieDetailsRouter: MovieDetailsRouterProtocol {
     }
     
     func navigateToReviewsScreen(from view: MovieDetailsViewProtocol, for movieId: Int) {
-        let reviewsVC = MovieReviewsRouter.createMovieReviewsModule(with: movieId)
-        guard let viewVC = view as? UIViewController else {
-            fatalError("Invalid view protocol type")
-        }
-        viewVC.navigationController?.pushViewController(reviewsVC, animated: true)
+//        let reviewsVC = MovieReviewsRouter.createMovieReviewsModule(with: movieId)
+//        guard let viewVC = view as? UIViewController else {
+//            fatalError("Invalid view protocol type")
+//        }
+//        viewVC.navigationController?.pushViewController(reviewsVC, animated: true)
+        Router.route?(.reviewsPage(movieId: movieId))
     }
     
     func navigateBackToDiscoverViewController(from view: MovieDetailsViewProtocol) {

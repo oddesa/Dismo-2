@@ -1,0 +1,6 @@
+framework module MovieReviews {
+  umbrella header "MovieReviews-umbrella.h"
+
+  export *
+  module * { export * }
+}

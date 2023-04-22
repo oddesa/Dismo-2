@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Shared
+import MovieReviews
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,6 +23,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = MovieDiscoverRouter.createMovieDiscoverModule()
         window?.makeKeyAndVisible()
+        
+        Router.route = { destination in
+            switch destination {
+//            case let .productDetailPage(product):
+//                let productDetailPage = ProductDetailPageViewController(product: product)
+//                UIApplication
+//                    .topViewController()?
+//                    .navigationController?
+//                    .pushViewController(productDetailPage, animated: true)
+            case let .reviewsPage(id):
+                let reviewsVC = MovieReviewsRouter.createMovieReviewsModule(with: id)
+                UIApplication.topViewController()?.navigationController?.pushViewController(reviewsVC, animated: true)
+            default:
+                return
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
