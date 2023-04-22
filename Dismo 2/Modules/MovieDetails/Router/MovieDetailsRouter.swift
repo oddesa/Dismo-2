@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Shared
 
 class MovieDetailsRouter: MovieDetailsRouterProtocol {
     func presentTrailerScreen(from view: MovieDetailsViewProtocol, for key: String) {

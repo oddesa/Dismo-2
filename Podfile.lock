@@ -6,11 +6,13 @@ PODS:
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
   - netfox (1.21.0)
+  - Shared (0.1.0):
+    - Kingfisher
+    - Moya
+    - netfox
 
 DEPENDENCIES:
-  - Kingfisher
-  - Moya
-  - netfox
+  - Shared (from `ModularizedModules/Shared`)
 
 SPEC REPOS:
   trunk:
@@ -19,12 +21,17 @@ SPEC REPOS:
     - Moya
     - netfox
 
+EXTERNAL SOURCES:
+  Shared:
+    :path: ModularizedModules/Shared
+
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
+  Shared: cf69454029df8ebad9f6ca698e4dfc981bdeee65
 
-PODFILE CHECKSUM: b7ec52ff192aa0e4ad8fae7c932aeb89c768f6ff
+PODFILE CHECKSUM: 7d18a0fa744c5bc28d11fb84d55c809e56e4a910
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.11.3

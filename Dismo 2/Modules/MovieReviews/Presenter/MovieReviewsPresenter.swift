@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Shared
 
 class MovieReviewsPresenter: MovieReviewsPresenterProtocol {
     weak var view: MovieReviewsViewProtocol?

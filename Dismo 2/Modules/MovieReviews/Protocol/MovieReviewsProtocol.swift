@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Shared
 
 protocol MovieReviewsRouterProtocol: AnyObject {
     static func createMovieReviewsModule(with movieId: Int) -> UIViewController

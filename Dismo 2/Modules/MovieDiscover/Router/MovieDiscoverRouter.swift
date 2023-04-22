@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Shared
 
 class MovieDiscoverRouter: MovieDiscoverRouterProtocol {
     func presentMovieCollectionsScreen(from view: MovieDiscoverViewProtocol, for genre: MovieGenre) {

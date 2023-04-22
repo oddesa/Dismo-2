@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Shared
 
 protocol MovieCollectionsPresenterProtocol: AnyObject {
     var view: MovieCollectionsViewProtocol? { get set }

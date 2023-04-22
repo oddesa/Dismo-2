@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Shared
 
 protocol MovieDetailsRouterProtocol: AnyObject {
     static func createMovieDetailsModule(with details: MovieDetails) -> UIViewController

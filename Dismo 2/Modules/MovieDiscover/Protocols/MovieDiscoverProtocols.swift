@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Shared
 
-protocol MovieDiscoverPresenterProtocol: AnyObject {
+public protocol MovieDiscoverPresenterProtocol: AnyObject {
     var view: MovieDiscoverViewProtocol? { get set }
     var interactor: MovieDiscoverInteractorInputProtocol? { get set }
     var router: MovieDiscoverRouterProtocol? { get set }
@@ -21,7 +22,7 @@ protocol MovieDiscoverPresenterProtocol: AnyObject {
     func showMovieCollectionsScreen(genre: MovieGenre)
 }
 
-protocol MovieDiscoverViewProtocol: AnyObject {
+public protocol MovieDiscoverViewProtocol: AnyObject {
     var presenter: MovieDiscoverPresenterProtocol? { get set }
     
     // PRESENTER -> VIEW
@@ -29,7 +30,7 @@ protocol MovieDiscoverViewProtocol: AnyObject {
     func showErrorMessage(_ message: String)
 }
 
-protocol MovieDiscoverInteractorInputProtocol: AnyObject {
+public protocol MovieDiscoverInteractorInputProtocol: AnyObject {
     var presenter: MovieDiscoverInteractorOutputProtocol? { get set }
     
     // PRESENTER -> INTERACTOR
@@ -38,7 +39,7 @@ protocol MovieDiscoverInteractorInputProtocol: AnyObject {
     func fetchMoviesByGenre(genre: MovieGenre)
 }
 
-protocol MovieDiscoverInteractorOutputProtocol: AnyObject {
+public protocol MovieDiscoverInteractorOutputProtocol: AnyObject {
     
     // INTERACTOR -> PRESENTER
     func didGetGenre(_ genres: [MovieGenre])
@@ -47,7 +48,7 @@ protocol MovieDiscoverInteractorOutputProtocol: AnyObject {
     func onError(message: String)
 }
 
-protocol MovieDiscoverRouterProtocol: AnyObject {
+public protocol MovieDiscoverRouterProtocol: AnyObject {
     static func createMovieDiscoverModule() -> UIViewController
     
     // PRESENTER -> ROUTER
