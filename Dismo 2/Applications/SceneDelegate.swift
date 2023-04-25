@@ -9,6 +9,7 @@ import UIKit
 import Shared
 import MovieReviews
 import MovieCollections
+import MovieDetails
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

@@ -15,6 +15,10 @@ def movie_collections_pod
   pod 'MovieCollections', :path => 'ModularizedModules/MovieCollections'
 end
 
+def movie_details_pod
+  pod 'MovieDetails', :path => 'ModularizedModules/MovieDetails'
+end
+
 target 'Dismo 2' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
@@ -25,6 +29,7 @@ target 'Dismo 2' do
   shared_pod
   movie_reviews_pod
   movie_collections_pod
+  movie_details_pod
 end
 
 target 'MovieReviews_Example' do
@@ -41,5 +46,13 @@ target 'MovieCollections_Example' do
   
   shared_pod
   movie_collections_pod
+end
+
+target 'MovieDetails_Example' do
+  use_frameworks!
+  project'ModularizedModules/MovieDetails/Example/MovieDetails.xcodeproj'
+  
+  shared_pod
+  movie_details_pod
 end
 

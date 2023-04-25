@@ -3,6 +3,8 @@ PODS:
   - Kingfisher (7.6.2)
   - MovieCollections (0.1.0):
     - Shared
+  - MovieDetails (0.1.0):
+    - Shared
   - MovieReviews (0.1.0):
     - Shared
   - Moya (15.0.0):
@@ -17,6 +19,7 @@ PODS:
 
 DEPENDENCIES:
   - MovieCollections (from `ModularizedModules/MovieCollections`)
+  - MovieDetails (from `ModularizedModules/MovieDetails`)
   - MovieReviews (from `ModularizedModules/MovieReviews`)
   - Shared (from `ModularizedModules/Shared`)
 
@@ -30,6 +33,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   MovieCollections:
     :path: ModularizedModules/MovieCollections
+  MovieDetails:
+    :path: ModularizedModules/MovieDetails
   MovieReviews:
     :path: ModularizedModules/MovieReviews
   Shared:
@@ -39,11 +44,12 @@ SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
   MovieCollections: dca51dd1fd6549daae8cf1715a058be5f8ddc01e
+  MovieDetails: 507418003e13ea46a64c7540223c02215ae2dd7f
   MovieReviews: 575ad3dbc46a15d61c22d7ff912277202baa0dee
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   Shared: cf69454029df8ebad9f6ca698e4dfc981bdeee65
 
-PODFILE CHECKSUM: df3e60db5a93aa4886a37701ab00df24f110bfb7
+PODFILE CHECKSUM: d50ad913d1ea8341a9ad470b1366242215e95f94
 
 COCOAPODS: 1.11.3

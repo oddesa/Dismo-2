@@ -34,10 +34,11 @@ class MovieDiscoverRouter: MovieDiscoverRouterProtocol {
     }
     
     func presentMovieDetailsScreen(from view: MovieDiscoverViewProtocol , for details: MovieDetails) {
-        let movieDetailsVC = MovieDetailsRouter.createMovieDetailsModule(with: details)
+//        let movieDetailsVC = MovieDetailsRouter.createMovieDetailsModule(with: details)
         guard let viewVC = view as? UIViewController else {
             fatalError("Invalid View Protocol type")
         }
-        viewVC.navigationController?.pushViewController(movieDetailsVC, animated: true)
+//        viewVC.navigationController?.pushViewController(movieDetailsVC, animated: true)
+        Router.route?(.detailsPage(details: details))
     }
 }
