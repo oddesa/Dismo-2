@@ -16,4 +16,7 @@
    <FileRef
       location = "group:ModularizedModules/MovieDetails/Example/MovieDetails.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ModularizedModules/MovieDiscover/Example/MovieDiscover.xcodeproj">
+   </FileRef>
 </Workspace>

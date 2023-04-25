@@ -7,51 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4E577380709E64028BCDF3 /* Pods_Dismo_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DF3705B971C8D8B9A817481 /* Pods_Dismo_2.framework */; };
 		980555E929E88732000E711C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980555E829E88732000E711C /* AppDelegate.swift */; };
 		980555EB29E88732000E711C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980555EA29E88732000E711C /* SceneDelegate.swift */; };
 		980555F229E88734000E711C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 980555F129E88734000E711C /* Assets.xcassets */; };
 		980555F529E88734000E711C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 980555F329E88734000E711C /* LaunchScreen.storyboard */; };
-		9805561E29E9A1DA000E711C /* MovieDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9805561C29E9A1DA000E711C /* MovieDiscoverViewController.swift */; };
-		9805561F29E9A1DA000E711C /* MovieDiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9805561D29E9A1DA000E711C /* MovieDiscoverViewController.xib */; };
-		9805562329E9A257000E711C /* GenreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9805562129E9A257000E711C /* GenreCollectionViewCell.swift */; };
-		9805562429E9A257000E711C /* GenreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9805562229E9A257000E711C /* GenreCollectionViewCell.xib */; };
-		9805562D29E9A4E4000E711C /* GenresCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9805562B29E9A4E4000E711C /* GenresCollectionTableViewCell.swift */; };
-		9805562E29E9A4E4000E711C /* GenresCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9805562C29E9A4E4000E711C /* GenresCollectionTableViewCell.xib */; };
-		9805563A29E9A907000E711C /* MovieColllectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9805563829E9A907000E711C /* MovieColllectionTableViewCell.swift */; };
-		9878EAEB29EAA07B007D9441 /* MovieDiscoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878EAEA29EAA07B007D9441 /* MovieDiscoverPresenter.swift */; };
-		9878EAED29EAA2CD007D9441 /* MovieDiscoverProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878EAEC29EAA2CD007D9441 /* MovieDiscoverProtocols.swift */; };
-		9878EAEF29EAB120007D9441 /* MovieDiscoverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878EAEE29EAB120007D9441 /* MovieDiscoverInteractor.swift */; };
-		9878EAF129EAB5FE007D9441 /* MovieDiscoverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878EAF029EAB5FE007D9441 /* MovieDiscoverRouter.swift */; };
 		98A3B41329EC3E0B00C6E647 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A3B41029EC3E0B00C6E647 /* ViewController.swift */; };
 		98A3B41429EC3E0B00C6E647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A3B41129EC3E0B00C6E647 /* Main.storyboard */; };
-		BB778239802263C145981ECD /* Pods_Dismo_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF067EC999320A853A00062D /* Pods_Dismo_2.framework */; };
-		FAB35F6E29F4513300219C67 /* MovieColllectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9805563929E9A907000E711C /* MovieColllectionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		145B71FCF495D516887A6110 /* Pods-Dismo 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dismo 2.debug.xcconfig"; path = "Target Support Files/Pods-Dismo 2/Pods-Dismo 2.debug.xcconfig"; sourceTree = "<group>"; };
+		2DF3705B971C8D8B9A817481 /* Pods_Dismo_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dismo_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		487913B341C071D988E26203 /* Pods-Dismo 2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dismo 2.release.xcconfig"; path = "Target Support Files/Pods-Dismo 2/Pods-Dismo 2.release.xcconfig"; sourceTree = "<group>"; };
 		980555E529E88732000E711C /* Dismo 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dismo 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		980555E829E88732000E711C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		980555EA29E88732000E711C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		980555F129E88734000E711C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		980555F429E88734000E711C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		980555F629E88734000E711C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9805561C29E9A1DA000E711C /* MovieDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDiscoverViewController.swift; sourceTree = "<group>"; };
-		9805561D29E9A1DA000E711C /* MovieDiscoverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDiscoverViewController.xib; sourceTree = "<group>"; };
-		9805562129E9A257000E711C /* GenreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionViewCell.swift; sourceTree = "<group>"; };
-		9805562229E9A257000E711C /* GenreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenreCollectionViewCell.xib; sourceTree = "<group>"; };
-		9805562B29E9A4E4000E711C /* GenresCollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresCollectionTableViewCell.swift; sourceTree = "<group>"; };
-		9805562C29E9A4E4000E711C /* GenresCollectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenresCollectionTableViewCell.xib; sourceTree = "<group>"; };
-		9805563829E9A907000E711C /* MovieColllectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieColllectionTableViewCell.swift; sourceTree = "<group>"; };
-		9805563929E9A907000E711C /* MovieColllectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieColllectionTableViewCell.xib; sourceTree = "<group>"; };
-		9878EAEA29EAA07B007D9441 /* MovieDiscoverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDiscoverPresenter.swift; sourceTree = "<group>"; };
-		9878EAEC29EAA2CD007D9441 /* MovieDiscoverProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDiscoverProtocols.swift; sourceTree = "<group>"; };
-		9878EAEE29EAB120007D9441 /* MovieDiscoverInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDiscoverInteractor.swift; sourceTree = "<group>"; };
-		9878EAF029EAB5FE007D9441 /* MovieDiscoverRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDiscoverRouter.swift; sourceTree = "<group>"; };
 		98A3B41029EC3E0B00C6E647 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		98A3B41229EC3E0B00C6E647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DF067EC999320A853A00062D /* Pods_Dismo_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dismo_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E28F0EFD62C5B1F89B0ABC33 /* Pods-Dismo 2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dismo 2.release.xcconfig"; path = "Target Support Files/Pods-Dismo 2/Pods-Dismo 2.release.xcconfig"; sourceTree = "<group>"; };
+		C8364CCA1CA762817710E5FB /* Pods-Dismo 2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dismo 2.debug.xcconfig"; path = "Target Support Files/Pods-Dismo 2/Pods-Dismo 2.debug.xcconfig"; sourceTree = "<group>"; };
 		FAB35F6329F2D70A00219C67 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB778239802263C145981ECD /* Pods_Dismo_2.framework in Frameworks */,
+				1E4E577380709E64028BCDF3 /* Pods_Dismo_2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,91 +103,15 @@
 			isa = PBXGroup;
 			children = (
 				9805561429E99C91000E711C /* Shared */,
-				9805563629E9A8CD000E711C /* MovieDiscover */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		9805563629E9A8CD000E711C /* MovieDiscover */ = {
-			isa = PBXGroup;
-			children = (
-				9878EAE929EA9FF9007D9441 /* Presenter */,
-				9878EAE829EA9F89007D9441 /* Protocols */,
-				9878EAE729EA9F44007D9441 /* Router */,
-				9878EAE629EA9F39007D9441 /* Interactor */,
-				9805563C29E9ABEC000E711C /* Views */,
-			);
-			path = MovieDiscover;
-			sourceTree = "<group>";
-		};
-		9805563C29E9ABEC000E711C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9805561C29E9A1DA000E711C /* MovieDiscoverViewController.swift */,
-				9805561D29E9A1DA000E711C /* MovieDiscoverViewController.xib */,
-				9805563E29E9ACFA000E711C /* TableViewCell */,
-				9805563D29E9ABF2000E711C /* CollectionViewCell */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9805563D29E9ABF2000E711C /* CollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9805562129E9A257000E711C /* GenreCollectionViewCell.swift */,
-				9805562229E9A257000E711C /* GenreCollectionViewCell.xib */,
-			);
-			path = CollectionViewCell;
-			sourceTree = "<group>";
-		};
-		9805563E29E9ACFA000E711C /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9805562B29E9A4E4000E711C /* GenresCollectionTableViewCell.swift */,
-				9805562C29E9A4E4000E711C /* GenresCollectionTableViewCell.xib */,
-				9805563829E9A907000E711C /* MovieColllectionTableViewCell.swift */,
-				9805563929E9A907000E711C /* MovieColllectionTableViewCell.xib */,
-			);
-			path = TableViewCell;
-			sourceTree = "<group>";
-		};
-		9878EAE629EA9F39007D9441 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				9878EAEE29EAB120007D9441 /* MovieDiscoverInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		9878EAE729EA9F44007D9441 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				9878EAF029EAB5FE007D9441 /* MovieDiscoverRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		9878EAE829EA9F89007D9441 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				9878EAEC29EAA2CD007D9441 /* MovieDiscoverProtocols.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		9878EAE929EA9FF9007D9441 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				9878EAEA29EAA07B007D9441 /* MovieDiscoverPresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		CDE4B5DA40CD9D2B34F0F83A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				145B71FCF495D516887A6110 /* Pods-Dismo 2.debug.xcconfig */,
-				E28F0EFD62C5B1F89B0ABC33 /* Pods-Dismo 2.release.xcconfig */,
+				C8364CCA1CA762817710E5FB /* Pods-Dismo 2.debug.xcconfig */,
+				487913B341C071D988E26203 /* Pods-Dismo 2.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -220,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB35F6329F2D70A00219C67 /* Shared.framework */,
-				DF067EC999320A853A00062D /* Pods_Dismo_2.framework */,
+				2DF3705B971C8D8B9A817481 /* Pods_Dismo_2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,11 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 980555F929E88734000E711C /* Build configuration list for PBXNativeTarget "Dismo 2" */;
 			buildPhases = (
-				415624BA2978463DB00456CA /* [CP] Check Pods Manifest.lock */,
+				08FC4D920670E2C57724B563 /* [CP] Check Pods Manifest.lock */,
 				980555E129E88732000E711C /* Sources */,
 				980555E229E88732000E711C /* Frameworks */,
 				980555E329E88732000E711C /* Resources */,
-				43779098DC19F959DB18D1F7 /* [CP] Embed Pods Frameworks */,
+				3A750929F5C9682E4AE3D6E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,20 +185,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB35F6E29F4513300219C67 /* MovieColllectionTableViewCell.xib in Resources */,
 				980555F529E88734000E711C /* LaunchScreen.storyboard in Resources */,
 				980555F229E88734000E711C /* Assets.xcassets in Resources */,
 				98A3B41429EC3E0B00C6E647 /* Main.storyboard in Resources */,
-				9805561F29E9A1DA000E711C /* MovieDiscoverViewController.xib in Resources */,
-				9805562429E9A257000E711C /* GenreCollectionViewCell.xib in Resources */,
-				9805562E29E9A4E4000E711C /* GenresCollectionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		415624BA2978463DB00456CA /* [CP] Check Pods Manifest.lock */ = {
+		08FC4D920670E2C57724B563 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,7 +216,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		43779098DC19F959DB18D1F7 /* [CP] Embed Pods Frameworks */ = {
+		3A750929F5C9682E4AE3D6E9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -344,15 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9805562D29E9A4E4000E711C /* GenresCollectionTableViewCell.swift in Sources */,
-				9878EAEF29EAB120007D9441 /* MovieDiscoverInteractor.swift in Sources */,
 				98A3B41329EC3E0B00C6E647 /* ViewController.swift in Sources */,
-				9805562329E9A257000E711C /* GenreCollectionViewCell.swift in Sources */,
-				9805561E29E9A1DA000E711C /* MovieDiscoverViewController.swift in Sources */,
-				9878EAEB29EAA07B007D9441 /* MovieDiscoverPresenter.swift in Sources */,
-				9878EAED29EAA2CD007D9441 /* MovieDiscoverProtocols.swift in Sources */,
-				9878EAF129EAB5FE007D9441 /* MovieDiscoverRouter.swift in Sources */,
-				9805563A29E9A907000E711C /* MovieColllectionTableViewCell.swift in Sources */,
 				980555E929E88732000E711C /* AppDelegate.swift in Sources */,
 				980555EB29E88732000E711C /* SceneDelegate.swift in Sources */,
 			);
@@ -496,7 +384,7 @@
 		};
 		980555FA29E88734000E711C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 145B71FCF495D516887A6110 /* Pods-Dismo 2.debug.xcconfig */;
+			baseConfigurationReference = C8364CCA1CA762817710E5FB /* Pods-Dismo 2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -526,7 +414,7 @@
 		};
 		980555FB29E88734000E711C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E28F0EFD62C5B1F89B0ABC33 /* Pods-Dismo 2.release.xcconfig */;
+			baseConfigurationReference = 487913B341C071D988E26203 /* Pods-Dismo 2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

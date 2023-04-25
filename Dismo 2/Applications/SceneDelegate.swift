@@ -10,6 +10,7 @@ import Shared
 import MovieReviews
 import MovieCollections
 import MovieDetails
+import MovieDiscover
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -28,12 +29,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         Router.route = { destination in
             switch destination {
-//            case let .productDetailPage(product):
-//                let productDetailPage = ProductDetailPageViewController(product: product)
-//                UIApplication
-//                    .topViewController()?
-//                    .navigationController?
-//                    .pushViewController(productDetailPage, animated: true)
             case let .reviewsPage(id):
                 let reviewsVC = MovieReviewsRouter.createMovieReviewsModule(with: id)
                 UIApplication.topViewController()?.navigationController?.pushViewController(reviewsVC, animated: true)
