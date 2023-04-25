@@ -10,4 +10,7 @@
    <FileRef
       location = "group:ModularizedModules/MovieReviews/Example/MovieReviews.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ModularizedModules/MovieCollections/Example/MovieCollections.xcodeproj">
+   </FileRef>
 </Workspace>

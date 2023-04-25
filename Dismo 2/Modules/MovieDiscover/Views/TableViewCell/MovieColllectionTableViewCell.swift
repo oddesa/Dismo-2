@@ -51,7 +51,11 @@ class MovieColllectionTableViewCell: UITableViewCell {
         collectionViewFlowLayout.itemSize = .init(width: 110, height: 160)
         collectionViewFlowLayout.minimumInteritemSpacing = 2
         collectionViewFlowLayout.scrollDirection = .horizontal
-        collectionView.register(nibWithCellClass: MovieCollectionViewCell.self)
+//        collectionView.register(nibWithCellClass: MovieCollectionViewCell.self)
+//        let bundle = Bundle(for: Self.self)
+//        let nib = UINib(nibName: "MovieCollectionViewCell", bundle: bundle)
+//        collectionView.register(nib, forCellWithReuseIdentifier: "MovieCollectionViewCell")
+        collectionView.register(UINib(nibName: "MovieCollectionViewCell", bundle: Bundle(for: MovieCollectionViewCell.self)), forCellWithReuseIdentifier: "MovieCollectionViewCell")
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self

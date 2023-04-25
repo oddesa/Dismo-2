@@ -10,11 +10,12 @@ import Shared
 
 class MovieDiscoverRouter: MovieDiscoverRouterProtocol {
     func presentMovieCollectionsScreen(from view: MovieDiscoverViewProtocol, for genre: MovieGenre) {
-        let collectionsVC = MovieCollectionsRouter.createMovieCollectionsModule(with: genre)
-        guard let viewVC = view as? UIViewController else {
-            fatalError("Invalid View Protocol type")
-        }
-        viewVC.navigationController?.pushViewController(collectionsVC, animated: true)
+//        let collectionsVC = MovieCollectionsRouter.createMovieCollectionsModule(with: genre)
+//        guard let viewVC = view as? UIViewController else {
+//            fatalError("Invalid View Protocol type")
+//        }
+//        viewVC.navigationController?.pushViewController(collectionsVC, animated: true)
+        Router.route?(.collectionsPage(genre: genre))
     }
     
     static func createMovieDiscoverModule() -> UIViewController {

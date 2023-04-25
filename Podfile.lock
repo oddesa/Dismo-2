@@ -1,6 +1,8 @@
 PODS:
   - Alamofire (5.6.4)
   - Kingfisher (7.6.2)
+  - MovieCollections (0.1.0):
+    - Shared
   - MovieReviews (0.1.0):
     - Shared
   - Moya (15.0.0):
@@ -14,6 +16,7 @@ PODS:
     - netfox
 
 DEPENDENCIES:
+  - MovieCollections (from `ModularizedModules/MovieCollections`)
   - MovieReviews (from `ModularizedModules/MovieReviews`)
   - Shared (from `ModularizedModules/Shared`)
 
@@ -25,6 +28,8 @@ SPEC REPOS:
     - netfox
 
 EXTERNAL SOURCES:
+  MovieCollections:
+    :path: ModularizedModules/MovieCollections
   MovieReviews:
     :path: ModularizedModules/MovieReviews
   Shared:
@@ -33,11 +38,12 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
+  MovieCollections: dca51dd1fd6549daae8cf1715a058be5f8ddc01e
   MovieReviews: 575ad3dbc46a15d61c22d7ff912277202baa0dee
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   Shared: cf69454029df8ebad9f6ca698e4dfc981bdeee65
 
-PODFILE CHECKSUM: bc769f94270c0f58b6f576663deaa50843f51526
+PODFILE CHECKSUM: df3e60db5a93aa4886a37701ab00df24f110bfb7
 
 COCOAPODS: 1.11.3

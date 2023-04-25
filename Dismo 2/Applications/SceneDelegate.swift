@@ -8,6 +8,7 @@
 import UIKit
 import Shared
 import MovieReviews
+import MovieCollections
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -35,6 +36,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             case let .reviewsPage(id):
                 let reviewsVC = MovieReviewsRouter.createMovieReviewsModule(with: id)
                 UIApplication.topViewController()?.navigationController?.pushViewController(reviewsVC, animated: true)
+            case let .detailsPage(details):
+                let detailsVC = MovieDetailsRouter.createMovieDetailsModule(with: details)
+                UIApplication.topViewController()?.navigationController?.pushViewController(detailsVC, animated: true)
+            case let .collectionsPage(genre):
+                let collectionsVC = MovieCollectionsRouter.createMovieCollectionsModule(with: genre)
+                UIApplication.topViewController()?.navigationController?.pushViewController(collectionsVC, animated: true)
             default:
                 return
             }
