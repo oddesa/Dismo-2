@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Shared
 
 class MovieDiscoverPresenter: MovieDiscoverPresenterProtocol {
     var view: MovieDiscoverViewProtocol?

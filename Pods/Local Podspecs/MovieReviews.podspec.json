@@ -1,0 +1,27 @@
+{
+  "name": "MovieReviews",
+  "version": "0.1.0",
+  "summary": "A short description of MovieReviews.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/oddesa/MovieReviews",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "oddesa": "jehnsen.hirena@sci.ui.ac.id"
+  },
+  "source": {
+    "git": "https://github.com/oddesa/MovieReviews.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "MovieReviews/Classes/**/*",
+  "dependencies": {
+    "Shared": [
+
+    ]
+  }
+}

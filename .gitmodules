@@ -1,0 +1,15 @@
+[submodule "ModularizedModules/MovieDiscover"]
+	path = ModularizedModules/MovieDiscover
+	url = https://github.com/oddesa/MovieDiscover-Dismo2
+[submodule "ModularizedModules/MovieCollections"]
+	path = ModularizedModules/MovieCollections
+	url = https://github.com/oddesa/MovieCollections-Dismo2
+[submodule "ModularizedModules/MovieDetails"]
+	path = ModularizedModules/MovieDetails
+	url = https://github.com/oddesa/MovieDetails-Dismo2
+[submodule "ModularizedModules/MovieReviews"]
+	path = ModularizedModules/MovieReviews
+	url = https://github.com/oddesa/MovieReviews-Dismo2
+[submodule "ModularizedModules/Shared"]
+	path = ModularizedModules/Shared
+	url = https://github.com/oddesa/Shared-Dismo2

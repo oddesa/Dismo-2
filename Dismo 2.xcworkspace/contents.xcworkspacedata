@@ -7,4 +7,16 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:ModularizedModules/MovieReviews/Example/MovieReviews.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ModularizedModules/MovieCollections/Example/MovieCollections.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ModularizedModules/MovieDetails/Example/MovieDetails.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ModularizedModules/MovieDiscover/Example/MovieDiscover.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Shared
 
 class MovieCollectionInteractor: MovieCollectionsInteractorInputProtocol {
     weak var presenter: MovieCollectionsInteractorOutputProtocol?

@@ -178,13 +178,23 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MovieCollections/MovieCollections.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MovieDetails/MovieDetails.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MovieDiscover/MovieDiscover.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MovieReviews/MovieReviews.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Moya/Moya.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Shared/Shared.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/netfox/netfox.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MovieCollections/MovieCollections.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MovieDetails/MovieDetails.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MovieDiscover/MovieDiscover.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MovieReviews/MovieReviews.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Moya/Moya.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Shared/Shared.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/netfox/netfox.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

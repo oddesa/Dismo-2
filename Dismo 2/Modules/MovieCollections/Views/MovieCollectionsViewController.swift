@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Shared
 class MovieCollectionsViewController: UIViewController {
 
     @IBOutlet weak var loadingView: UIActivityIndicatorView!

@@ -1,0 +1,6 @@
+framework module MovieDetails {
+  umbrella header "MovieDetails-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "MovieDetails",
+  "version": "0.1.0",
+  "summary": "A short description of MovieDetails.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/oddesa/MovieDetails",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "oddesa": "jehnsen.hirena@sci.ui.ac.id"
+  },
+  "source": {
+    "git": "https://github.com/oddesa/MovieDetails.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "MovieDetails/Classes/**/*",
+  "dependencies": {
+    "Shared": [
+
+    ]
+  }
+}

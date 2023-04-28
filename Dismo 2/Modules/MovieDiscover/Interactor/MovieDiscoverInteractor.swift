@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import Shared 
 // TODO: Implement caching for movie detail using dict
 
 class MovieDiscoverInteractor: MovieDiscoverInteractorInputProtocol {

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Shared
 class MovieReviewsTableViewController: UITableViewController {
     
     var presenter: MovieReviewsPresenterProtocol?

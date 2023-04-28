@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Shared
 
 class MovieCollectionsRouter: MovieCollectionsRouterProtocol {
     static func createMovieCollectionsModule(with genre: MovieGenre) -> UIViewController {

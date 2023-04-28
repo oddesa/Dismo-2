@@ -1,0 +1,6 @@
+framework module MovieDiscover {
+  umbrella header "MovieDiscover-umbrella.h"
+
+  export *
+  module * { export * }
+}
